@@ -3,4 +3,9 @@ arr=list(map(int,input().split()))
 
 arr.sort()
 
-print(arr[0]+arr[-1]+1)
+maxs=0
+x=len(arr) //2
+
+for i in range(0,x):
+    maxs=max(arr[0+i]+arr[-1-i],maxs)
+print(maxs)

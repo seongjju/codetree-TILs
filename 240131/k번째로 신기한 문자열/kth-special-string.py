@@ -5,7 +5,7 @@ arr=[]
 for _ in range(n):
     string=input()
     # string=list(string)
-    if t in string:
+    if t[0] == string[0] and t[1] == string[1]:
         arr.append(string)
 
 

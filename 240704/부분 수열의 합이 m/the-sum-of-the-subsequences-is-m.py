@@ -5,7 +5,7 @@ dp = [9999999] * (m + 1)
 dp[0] = 0
 
 for num in arr:
-    for j in range(m, 0, -1):
+    for j in range(m, 1, -1):
         if dp[j - num] != 9999999:  
             dp[j] = min(dp[j], dp[j - num] + 1)
 

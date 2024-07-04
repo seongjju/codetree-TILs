@@ -1,34 +1,41 @@
-a,b=map(int,input().split())
-arr=[list(map(int,input().split())) for _ in range(a)]
-
-
-def fun(a,b,arr):
-    cnt=0
-    for r in range(0,a):
-        result = 1
-        for c in range(1,a):
-            if arr[r][c] == arr[r][c-(b-1)]:
-                result +=1
+def count_happy_sequences(n, b, grid):
+    happy_count = 0
+    
+    # 행 검사
+    for r in range(n):
+        current_length = 1
+        for c in range(1, n):
+            if grid[r][c] == grid[r][c-1]:
+                current_length += 1
             else:
-                if result >= b:
-                    cnt+=1
-                result = 1
-        if result >= b:
-            cnt+=1
-
-    for c in range(0,a):
-        result = 1
-        for r in range(1,a):
-            if arr[r][c] == arr[r-(b-1)][c]:
-                result +=1
+                if current_length >= b:
+                    happy_count += 1
+                current_length = 1
+        if current_length >= b:
+            happy_count += 1
+    
+    # 열 검사
+    for c in range(n):
+        current_length = 1
+        for r in range(1, n):
+            if grid[r][c] == grid[r-1][c]:
+                current_length += 1
             else:
-                if result >= b:
-                    cnt+=1
-                result = 1
-        if result >= b:
-            cnt+=1
+                if current_length >= b:
+                    happy_count += 1
+                current_length = 1
+        if current_length >= b:
+            happy_count += 1
+    
+    return happy_count
 
-    return cnt
+# 입력 받기
+a, b = map(int, input().split())
+arr = []
+for _ in range(a):
+    row = list(map(int, input().split()))
+    arr.append(row)
 
-re = fun(a,b,arr)
-print(re)
+# 결과 출력
+result = count_happy_sequences(a, b, arr)
+print(result)

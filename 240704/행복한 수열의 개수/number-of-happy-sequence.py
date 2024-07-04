@@ -12,7 +12,7 @@ def fun(a,b,arr):
             else:
                 if result >= b:
                     cnt+=1
-                result = 1
+                result = 0
         if result >= b:
             cnt+=1
 
@@ -24,7 +24,7 @@ def fun(a,b,arr):
             else:
                 if result >= b:
                     cnt+=1
-                result = 1
+                result = 0
         if result >= b:
             cnt+=1
 

@@ -7,24 +7,24 @@ def fun(a,b,arr):
     for r in range(0,a):
         result = 1
         for c in range(1,a):
-            if arr[r][c] == arr[r][c-1]:
+            if arr[r][c] == arr[r][c-(b-1)]:
                 result +=1
             else:
                 if result >= b:
                     cnt+=1
-                result = 0
+                result = 1
         if result >= b:
             cnt+=1
 
     for c in range(0,a):
         result = 1
         for r in range(1,a):
-            if arr[r][c] == arr[r-1][c]:
+            if arr[r][c] == arr[r-(b-1)][c]:
                 result +=1
             else:
                 if result >= b:
                     cnt+=1
-                result = 0
+                result = 1
         if result >= b:
             cnt+=1
 

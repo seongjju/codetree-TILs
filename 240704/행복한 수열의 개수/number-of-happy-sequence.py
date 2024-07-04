@@ -5,7 +5,7 @@ arr=[list(map(int,input().split())) for _ in range(a)]
 def fun(a,b,arr):
     cnt=0
     for r in range(0,a):
-        result = 1
+        result = 0
         for c in range(1,a):
             if arr[r][c] == arr[r][c-1]:
                 result +=1
@@ -17,7 +17,7 @@ def fun(a,b,arr):
             cnt+=1
 
     for c in range(0,a):
-        result = 1
+        result = 0
         for r in range(1,a):
             if arr[r][c] == arr[r-1][c]:
                 result +=1

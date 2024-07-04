@@ -3,9 +3,9 @@ arr=[list(map(int,input().split())) for _ in range(n)]
 
 arr2=[[0]* n for _ in range(n)]
 arr2[0][0] = arr[0][0]
-for i in range(n):
+for i in range(1,n):
     arr2[0][i]=arr[0][i]+arr2[0][i-1]
-for i in range(n):
+for i in range(1,n):
     arr2[i][0]=arr[i][0]+arr2[i-1][0]
 
 for i in range(1,n):

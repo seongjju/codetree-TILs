@@ -28,4 +28,4 @@ else:
         if d==arr[c]:
             c+=1 
             d=0    
-print(day[cnt%7 - 1])
+    print(day[cnt%7 - 1])

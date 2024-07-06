@@ -7,6 +7,8 @@ sa,sb,sc = 11,11,11
 
 cnt= 0
 
+if a>=11 and b>= 11 and c>11
+
 while True:
     if sa == a and sb == b and sc == c:
         break

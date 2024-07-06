@@ -7,7 +7,9 @@ sa,sb,sc = 11,11,11
 
 cnt= 0
 #11일 11시 10분 이면 안됨
-if a<11 and b< 11:
+if a<11:
+    print(-1)
+elif a==11 and b<11:
     print(-1)
 elif a==11 and b==11 and c<11:
     print(-1)

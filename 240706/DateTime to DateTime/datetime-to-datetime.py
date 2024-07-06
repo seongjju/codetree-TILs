@@ -10,18 +10,19 @@ cnt= 0
 if a>=11 and b>= 11 and c>11:
     print(-1)
 
-while True:
-    if sa == a and sb == b and sc == c:
-        break
-        
-    cnt +=1
-    sc+=1
+else:
+    while True:
+        if sa == a and sb == b and sc == c:
+            break
+            
+        cnt +=1
+        sc+=1
 
-    if sc == 60:
-        sc=0
-        sb+=1
-    if sb == 24:
-        sb=0
-        sa+=1
+        if sc == 60:
+            sc=0
+            sb+=1
+        if sb == 24:
+            sb=0
+            sa+=1
 
-print(cnt)
+    print(cnt)

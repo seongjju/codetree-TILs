@@ -9,7 +9,7 @@ cnt= 0
 #11일 11시 10분 이면 안됨
 if a<11 and b< 11:
     print(-1)
-if a==11 and b==11 c<11:
+elif a==11 and b==11 c<11:
     print(-1)
 
 else:

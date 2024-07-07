@@ -17,7 +17,7 @@ for i in range(n):
             x-=1     
         x+=1 
 cnt=0
-for i in range(len(arr)):
+for i in range(len(arr)-1):
     if arr[i]>=2 and arr[i+1]>=2:
         cnt+=1
 print(cnt)

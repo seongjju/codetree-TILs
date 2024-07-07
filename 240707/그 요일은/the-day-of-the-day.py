@@ -29,14 +29,3 @@ if cnt%7 >= day_a:
     x+=1
 
 print(cnt//7 + x)
-
-#화요일기준
-day[cnt%7 + 1]
-
-# count = 0
-# for i in range(len(day)):
-#     if a== day[i]:
-#         count = cnt//7 
-#         index = cnt%7 +i
-# print(count)
-# #월요일일때 횟수

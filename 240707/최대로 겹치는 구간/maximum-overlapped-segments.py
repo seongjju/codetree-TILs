@@ -1,5 +1,5 @@
 n=int(input())
-arr=[0]*100
+arr=[0]*200
 
 for i in range(n):
     a,b = map(int,input().split())

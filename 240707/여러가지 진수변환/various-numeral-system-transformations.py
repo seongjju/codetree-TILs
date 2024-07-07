@@ -16,7 +16,7 @@ if b ==4:
             arr.append(3)
             n=n//4
         else:
-            arr.append(4)
+            arr.append(0)
             n=n//4    
 else:
     while True:
@@ -43,6 +43,9 @@ else:
             n=n//8              
         elif n%8==7:
             arr.append(7)
+            n=n//8  
+        else:
+            arr.append(0)
             n=n//8  
 for i in arr[::-1]:
     print(i,end = '')

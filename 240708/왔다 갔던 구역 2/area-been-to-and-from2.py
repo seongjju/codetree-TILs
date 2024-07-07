@@ -1,19 +1,20 @@
 n = int(input())
-arr = [0] * 200  # 배열 크기를 넉넉하게 설정
-x = 100  # 시작 위치를 배열 중앙으로 설정
+arr = [0] * 200
+x = 100  # 초기 위치
 
-for _ in range(n):
+for i in range(n):
     a, b = input().split()
     a = int(a)
+    
     if b == 'R':
-        for i in range(a):
-            arr[x] += 1
-            x += 1
-    elif b == 'L':
-        for i in range(a):
-            arr[x] += 1
-            x -= 1
-    arr[x] += 1  # 마지막 위치에서도 증가
+        for j in range(x + 1, x + a + 1):
+            arr[j] += 1
+        x += a  # 오른쪽으로 이동한 만큼 x 업데이트
+
+    if b == 'L':
+        for j in range(x - 1, x - a - 1, -1):
+            arr[j] += 1
+        x -= a  # 왼쪽으로 이동한 만큼 x 업데이트
 
 cnt = 0
 for i in range(len(arr) - 1):

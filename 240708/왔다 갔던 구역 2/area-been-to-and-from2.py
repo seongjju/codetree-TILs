@@ -1,24 +1,24 @@
 n = int(input())
-arr = [0] * 200
-x = 100  # 초기 위치
+arr = [0] * 200  # 배열 크기를 넉넉하게 설정
+x = 100  # 시작 위치를 배열 중앙으로 설정
 
-for i in range(n):
+# 명령을 처리하며 이동 경로 기록
+for _ in range(n):
     a, b = input().split()
     a = int(a)
-    
     if b == 'R':
-        for j in range(x + 1, x + a + 1):
-            arr[j] += 1
-        x += a  # 오른쪽으로 이동한 만큼 x 업데이트
-
-    if b == 'L':
-        for j in range(x - 1, x - a - 1, -1):
-            arr[j] += 1
-        x -= a  # 왼쪽으로 이동한 만큼 x 업데이트
+        for i in range(a):
+            arr[x] += 1
+            x += 1
+    elif b == 'L':
+        for i in range(a):
+            arr[x] += 1
+            x -= 1
 
 cnt = 0
-for i in range(len(arr) - 1):
-    if arr[i] >= 2 and arr[i + 1] >= 2:
+# 2번 이상 지나간 위치를 세기
+for i in range(len(arr)):
+    if arr[i] >= 2:
         cnt += 1
 
 print(cnt)

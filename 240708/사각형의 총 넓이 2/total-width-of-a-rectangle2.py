@@ -1,5 +1,5 @@
 n= int(input())
-arr = [[0]*200 for _ in range(200)]
+arr = [[0]*201 for _ in range(201)]
 for _ in range(n):
     x1,y1,x2,y2 = map(int,input().split())
     for i in range(x1+1+100,x2+1+100):

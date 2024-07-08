@@ -1,5 +1,5 @@
 n=int(input())
-a=[]
+a=[0] * 1001
 cnt=0
 for i in range(n):
     a[i] = int(input())

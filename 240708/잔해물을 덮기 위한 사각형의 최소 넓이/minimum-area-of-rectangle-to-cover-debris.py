@@ -20,13 +20,21 @@ for _ in range(1):
     y2 = y2 + 1000
     for i in range(x1,x2):
         for j in range(y1,y2):
-            break
-        break
+            arr[i][j] +=2
+            print()
 
 
 for i in range(len(arr)):
     for j in arr[i]:
-        if j==1:
+        if j==1 or j==3:
             cnt+=1
 
-print(cnt)
+x=0
+for i in range(len(arr)):
+    for j in arr[i]:
+        if j==1 :
+            x+=1
+if x ==0: 
+    print(x)
+else:
+    print(cnt)

@@ -6,5 +6,9 @@ maxs=0
 maxs = max(a,b,c,d)
 mins = min(a,b,c,d)
 
-sums = maxs-mins
+if b<c:
+    sums = b-a + d-c
+
+else:
+    sums = maxs-mins
 print(sums)

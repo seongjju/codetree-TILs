@@ -12,7 +12,7 @@ for i in arr:
     if i==n:
         cnt+=1
 
-if cnt==1:
+if cnt>=1:
     print("Yes")
 else:
     print("No")
